@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/first_to_second"
+        motion:constraintSetStart="@id/first"
+        motion:constraintSetEnd="@+id/second"
+        motion:duration="1000">
+        <OnSwipe motion:dragDirection="dragDown" motion:touchAnchorSide="middle" motion:touchAnchorId="@+id/point" />
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+    <Transition
+        android:id="@+id/second_to_third"
+        motion:constraintSetStart="@id/second"
+        motion:constraintSetEnd="@+id/third"
+        motion:duration="1000">
+        <OnSwipe motion:dragDirection="dragDown" motion:touchAnchorSide="middle" motion:touchAnchorId="@+id/point" />
+        <KeyFrameSet>
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        android:id="@+id/third_to_fourd"
+        motion:constraintSetStart="@id/third"
+        motion:constraintSetEnd="@+id/fourd"
+        motion:duration="1000">
+        <OnSwipe motion:dragDirection="dragDown" motion:touchAnchorSide="middle" motion:touchAnchorId="@+id/point" />
+        <KeyFrameSet>
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/first">
+        <Constraint
+            android:id="@+id/point"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/second">
+        <Constraint android:layout_marginEnd="32dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="32dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/point"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/third">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="400dp"
+            android:id="@+id/point" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/fourd">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="600dp"
+            android:id="@+id/point" />
+    </ConstraintSet>
+</MotionScene>
